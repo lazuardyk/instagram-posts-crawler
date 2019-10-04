@@ -1,5 +1,5 @@
 # instagram-post-crawler
-Merupakan tools yang berguna untuk mengolah dan mendapatkan konten post di Instagram.
+Merupakan tools yang berguna untuk mendapatkan dan mengolah konten post di Instagram.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
