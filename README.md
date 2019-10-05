@@ -13,6 +13,7 @@ Merupakan tools yang berguna untuk mendapatkan dan mengolah konten post di Insta
 - Koneksi Bagus
 - Beberapa Akun Instagram (karena Instagram memiliki limit akses)
 - Library Python berupa: **pandas, selenium, emoji**
+- Chrome WebDriver
 
 ### Cara Penggunaan
 1. Unduh/clone repository ini.
