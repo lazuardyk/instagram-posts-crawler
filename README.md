@@ -38,7 +38,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Kontak
 
-Lazuardy Khatulistiwa - [@lazuardyk](https://twitter.com/lazuardyk) - lazdevs@gmail.com
+Lazuardy Khatulistiwa - [@lazuardyk](https://github.com/lazuardyk) - lazdevs@gmail.com
+Zaidan Pratama - [@zaidanprtm](https://github.com/zaidanprtm) - zaidanpratamaa@gmail.com
 
 Project Link: [https://github.com/lazuardyk/instagram-post-crawler/](https://github.com/lazuardyk/instagram-post-crawler/)
 
