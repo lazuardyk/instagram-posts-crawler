@@ -1,6 +1,6 @@
 ### Hasil Data
 
-Hasil dari data yang kami kumpulkan untuk **Dataset Post** yaitu sebanyak 123 baris, dengan ukuran sebesar 30 MB. Setelah diolah menjadi **Dataset Pasangan Kata**, terdapat 123 baris dengan ukuran sebesar 35MB.
+Hasil dari data yang kami kumpulkan untuk **Dataset Post** yaitu sebanyak 71.000+ baris, dengan ukuran sebesar 29.8 MB. Setelah dihapus baris yang sama dan diolah menjadi **Dataset Pasangan Kata**, terdapat 945.000+ baris dengan ukuran sebesar 25.4 MB.
 
 Dalam proses pengumpulan data, kami memerlukan waktu 3 hari dengan 10 akun yang berbeda.<br>
 Beberapa kendala yang kami alami saat pengumpulan data:
