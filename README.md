@@ -10,7 +10,7 @@ Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Ins
 ### Tentang
 - Tujuan
 1. Menghasilkan **Dataset Posts** berupa username, caption, hashtag, likes, dan comments.
-2. Kemudian Dataset tersebut diolah menjadi **Dataset Kumpulan Pasangan Kata**
+2. Kemudian Dataset tersebut diolah menjadi **Dataset Kumpulan Pasangan Kata** berupa id user, kata pertama, kata kedua, dan frekuensi kemunculan.
 
 - Cara Kerja<br>
 1. Program ini akan mengambil post dan username setiap followers dari username pertama (target)
