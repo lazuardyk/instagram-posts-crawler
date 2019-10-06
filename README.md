@@ -5,7 +5,6 @@ Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Ins
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 ### Tentang
 - Tujuan
@@ -18,7 +17,7 @@ Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Ins
 3. Setelah selesai, target selanjutnya akan dipilih secara acak dari followers username pertama
 4. Kembali ke langkah 1, tetapi dengan target yang sudah dipilih sebelumnya
 5. Program akan berhenti ketika semua akun menyentuh limit atau jika koneksi tidak mendukung
-6. Hasil berupa Dataset dengan format CSV berupa username, caption, hashtag, likes, dan comments.
+6. Hasil berupa Dataset Posts dengan format CSV berupa username, caption, hashtag, likes, dan comments.
 
 
 
@@ -34,17 +33,16 @@ Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Ins
 1. Unduh/clone repository ini.
 2. Install python dan library yang diperlukan. Untuk library dapat diinstall melalui cmd: ```pip install <nama library>```
 3. Download Chrome WebDriver dan taruh file exe nya di folder yang sama dengan file ini.
-3. Siapkan beberapa akun dan buat file txt dengan format **username:password**
-3. Jalankan script python crawl.py dengan mengklik 2x atau dengan command ```python crawl.py```
-4. Isi input nama file akun dan username pertama yang ingin di scrape
+4. Siapkan beberapa akun dan buat file txt dengan format **username:password**, untuk memisahkan akun pisahkan dengan baris baru.<br>
+Contoh:<br>```username:password```<br>```username2:password2```
+5. Jalankan script python crawl.py dengan mengklik 2x atau dengan command ```python crawl.py```
+6. Isi input nama file akun dan username pertama yang ingin di scrape
+7. Hasil terdapat di ```dataset-posts.csv```
 
 - Mengolah hasil Dataset Posts menjadi Dataset Pasangan Kata
 1. Jalankan script python olah.py dengan mengklik 2x atau dengan command ```python olah.py```
-2. Isi input nama file hasil dataset
-
-## Lisensi
-
-Distributed under the MIT License. See `LICENSE` for more information.
+2. Isi input nama file hasil Dataset Posts
+3. Hasil terdapat di ```dataset-pasangankata.csv```
 
 ## Kontak
 
@@ -55,16 +53,11 @@ Project Link: [https://github.com/lazuardyk/instagram-post-crawler/](https://git
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lazuardyk/sipema.svg?style=flat-square
-[contributors-url]: https://github.com/lazuardyk/sipema/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/lazuardyk/sipema.svg?style=flat-square
-[forks-url]: https://github.com/lazuardyk/sipema/network/members
-[stars-shield]: https://img.shields.io/github/stars/lazuardyk/sipema.svg?style=flat-square
-[stars-url]: https://github.com/lazuardyk/sipema/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lazuardyk/sipema.svg?style=flat-square
-[issues-url]: https://github.com/lazuardyk/sipema/issues
-[license-shield]: https://img.shields.io/github/license/lazuardyk/sipema.svg?style=flat-square
-[license-url]: https://github.com/lazuardyk/sipema/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/lazuardyk
-[product-screenshot]: screenshot.png
+[contributors-shield]: https://img.shields.io/github/contributors/lazuardyk/instagram-post-crawler.svg?style=flat-square
+[contributors-url]: https://github.com/lazuardyk/instagram-post-crawler/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/instagram-post-crawler/sipema.svg?style=flat-square
+[forks-url]: https://github.com/lazuardyk/instagram-post-crawler/network/members
+[stars-shield]: https://img.shields.io/github/stars/lazuardyk/instagram-post-crawler.svg?style=flat-square
+[stars-url]: https://github.com/lazuardyk/instagram-post-crawler/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lazuardyk/instagram-post-crawler.svg?style=flat-square
+[issues-url]: https://github.com/lazuardyk/instagram-post-crawler/issues
