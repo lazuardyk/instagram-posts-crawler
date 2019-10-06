@@ -49,7 +49,7 @@ Contoh:<br>```username:password```<br>```username2:password2```
 - Lazuardy Khatulistiwa - [@lazuardyk](https://github.com/lazuardyk) - lazdevs@gmail.com
 - Zaidan Pratama - [@zaidanprtm](https://github.com/zaidanprtm) - zaidanpratamaa@gmail.com
 
-Project Link: [https://github.com/lazuardyk/instagram-posts-crawler/](https://github.com/lazuardyk/instagram-post-crawler/)
+Project Link: [https://github.com/lazuardyk/instagram-posts-crawler/](https://github.com/lazuardyk/instagram-posts-crawler/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
