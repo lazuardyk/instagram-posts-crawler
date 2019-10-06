@@ -55,7 +55,7 @@ Project Link: [https://github.com/lazuardyk/instagram-posts-crawler/](https://gi
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/lazuardyk/instagram-posts-crawler.svg?style=flat-square
 [contributors-url]: https://github.com/lazuardyk/instagram-posts-crawler/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/instagram-posts-crawler/sipema.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/lazuardyk/instagram-posts-crawler.svg?style=flat-square
 [forks-url]: https://github.com/lazuardyk/instagram-posts-crawler/network/members
 [stars-shield]: https://img.shields.io/github/stars/lazuardyk/instagram-posts-crawler.svg?style=flat-square
 [stars-url]: https://github.com/lazuardyk/instagram-posts-crawler/stargazers
