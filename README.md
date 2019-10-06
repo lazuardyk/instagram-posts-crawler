@@ -14,6 +14,7 @@ Cara kerjanya:
 2. Kemudian akan dilanjutkan mengambil konten post dari setiap followers
 3. Setelah selesai, target selanjutnya akan dipilih secara acak dari followers username pertama
 4. Kembali ke langkah 1, tetapi dengan target yang sudah dipilih sebelumnya
+5. Program akan berhenti ketika semua akun menyentuh limit
 
 ### Yang di Butuhkan
 - Python 3.5+
