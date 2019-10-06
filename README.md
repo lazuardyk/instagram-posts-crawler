@@ -1,5 +1,5 @@
 # instagram-post-crawler
-Merupakan tools yang berguna untuk mendapatkan dan mengolah konten post di Instagram.
+Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Instagram.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -10,7 +10,7 @@ Merupakan tools yang berguna untuk mendapatkan dan mengolah konten post di Insta
 ### Tentang
 Instagram Post Crawler ini akan mengambil konten post dari user berupa username, caption, hashtag, likes, dan comments.
 Cara kerjanya:
-1. Tools ini akan mengambil post dan username setiap followers dari username pertama (target)
+1. Program ini akan mengambil post dan username setiap followers dari username pertama (target)
 2. Kemudian akan dilanjutkan mengambil konten post dari setiap followers
 3. Setelah selesai, target selanjutnya akan dipilih secara acak dari followers username pertama
 4. Kembali ke langkah 1, tetapi dengan target yang sudah dipilih sebelumnya
