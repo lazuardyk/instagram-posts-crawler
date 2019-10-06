@@ -1,4 +1,4 @@
-# instagram-post-crawler
+# instagram-posts-crawler
 Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Instagram.
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -49,15 +49,15 @@ Contoh:<br>```username:password```<br>```username2:password2```
 - Lazuardy Khatulistiwa - [@lazuardyk](https://github.com/lazuardyk) - lazdevs@gmail.com
 - Zaidan Pratama - [@zaidanprtm](https://github.com/zaidanprtm) - zaidanpratamaa@gmail.com
 
-Project Link: [https://github.com/lazuardyk/instagram-post-crawler/](https://github.com/lazuardyk/instagram-post-crawler/)
+Project Link: [https://github.com/lazuardyk/instagram-posts-crawler/](https://github.com/lazuardyk/instagram-post-crawler/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/lazuardyk/instagram-post-crawler.svg?style=flat-square
-[contributors-url]: https://github.com/lazuardyk/instagram-post-crawler/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/instagram-post-crawler/sipema.svg?style=flat-square
-[forks-url]: https://github.com/lazuardyk/instagram-post-crawler/network/members
-[stars-shield]: https://img.shields.io/github/stars/lazuardyk/instagram-post-crawler.svg?style=flat-square
-[stars-url]: https://github.com/lazuardyk/instagram-post-crawler/stargazers
-[issues-shield]: https://img.shields.io/github/issues/lazuardyk/instagram-post-crawler.svg?style=flat-square
-[issues-url]: https://github.com/lazuardyk/instagram-post-crawler/issues
+[contributors-shield]: https://img.shields.io/github/contributors/lazuardyk/instagram-posts-crawler.svg?style=flat-square
+[contributors-url]: https://github.com/lazuardyk/instagram-posts-crawler/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/instagram-posts-crawler/sipema.svg?style=flat-square
+[forks-url]: https://github.com/lazuardyk/instagram-posts-crawler/network/members
+[stars-shield]: https://img.shields.io/github/stars/lazuardyk/instagram-posts-crawler.svg?style=flat-square
+[stars-url]: https://github.com/lazuardyk/instagram-posts-crawler/stargazers
+[issues-shield]: https://img.shields.io/github/issues/lazuardyk/instagram-posts-crawler.svg?style=flat-square
+[issues-url]: https://github.com/lazuardyk/instagram-posts-crawler/issues
