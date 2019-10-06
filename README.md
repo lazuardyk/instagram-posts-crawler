@@ -1,5 +1,5 @@
 # instagram-posts-crawler
-Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Instagram.
+Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Instagram menjadi Dataset.
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
