@@ -1,7 +1,7 @@
 import pandas as pd
 import time
 
-df = pd.read_csv('hasil-new-banget.csv')
+df = pd.read_csv('dataset-pasangankata.csv')
 kata = input("masukkan kata:")
 start = time.time()
 dfsearch = df.loc[df['word1'] == kata] ## mencari data yang mengandung kata yang diinput
