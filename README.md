@@ -1,3 +1,10 @@
+## Modifications:
+- Menambahkan algoritma BFS pada script `crawl.py`
+- Menambahkan script `fitur.py` untuk menjawab pertanyaan-pertanyaan trivial
+- Menambahkan script `mongodb_convert.py` untuk mengimport dataset CSV kedalam database mongoDB
+- Mengatasi limit instagram dengan penggantian akun otomatis saat akun yang sedang digunakan mencapai limit
+- Menambahkan script `nextwordprediction.py` untuk membuat next word prediction berdasarkan kata yang di input menggunakan algoritma Gaussian Naive Bayes
+
 # instagram-posts-crawler
 Merupakan program yang berguna untuk mendapatkan dan mengolah konten post di Instagram menjadi Dataset.
 
