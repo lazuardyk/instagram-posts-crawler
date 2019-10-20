@@ -16,20 +16,18 @@ def login(username, password):
     uname = driver.find_element_by_xpath('//input[@name="username"]')
     uname.clear()
     uname.send_keys(username)
-    pwd = driver.find_element_by_xpath(
-        '//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input')
+    pwd = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[3]/div/label/input')
     pwd.clear()
     pwd.send_keys(password)
-    login = driver.find_element_by_xpath(
-        '//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[4]/button')
+    login = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/article/div/div[1]/div/form/div[4]/button')
     driver.execute_script('arguments[0].click();', login)
     time.sleep(2)
 
 def give_emoji_free_text(text):
     return emoji.get_emoji_regexp().sub(r'', text)
 
-def place_value(number):
-    return ("{:,}".format(number))
+def place_value(number): 
+    return ("{:,}".format(number)) 
 
 def crawlwithlogin(link):
     global driver
@@ -38,10 +36,9 @@ def crawlwithlogin(link):
     driver.get(link)
     if "Page Not Found" in driver.title:
         return "limit"
-    username = link.replace("https://www.instagram.com/", "").replace("/", "")
+    username = link.replace("https://www.instagram.com/","").replace("/","")
     try:
-        followers = driver.find_element_by_xpath(
-            '//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/span')
+        followers = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/span')
     except:
         return "unable"
     followers = followers.get_attribute('title')
@@ -60,32 +57,26 @@ def crawlwithlogin(link):
     usernamelist = []
     allcomments = []
     allhastags = []
-
+    
     for post in linkpost:
         time.sleep(1)
         driver.get(post)
-        try:  # jika terdapat views pada post, maka post adalah video
-            views = driver.find_element_by_xpath(
-                '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/span/span')
-            button = driver.find_element_by_xpath(
-                '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/span[@role="button" and contains(., "views")]')
+        try: ##jika terdapat views pada post, maka post adalah video
+            views = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/span/span')
+            button = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/span[@role="button" and contains(., "views")]')
             driver.execute_script('arguments[0].click();', button)
             try:
-                likes = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/div[4]/span')
+                likes = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/div[4]/span')
             except:
-                likes = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/div[4]')
+                likes = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/div[4]')
             jumlahlike = likes.text
-            if 'like' in jumlahlike:  # like cuma satu
+            if 'like' in jumlahlike: ## like cuma satu
                 jumlahlike = jumlahlike.replace(' like', '')
             try:
-                caption = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul/div/li/div/div/div[2]/span')
-            except:  # jika tidak ada caption
+                caption = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul/div/li/div/div/div[2]/span')
+            except: ## jika tidak ada caption
                 continue
-            comments = driver.find_elements_by_xpath(
-                '//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul//ul/div/li/div/div[1]/div[2]/span')
+            comments = driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul//ul/div/li/div/div[1]/div[2]/span')
             listcomment = []
             for comment in comments:
                 listcomment.append(give_emoji_free_text(comment.text))
@@ -101,39 +92,32 @@ def crawlwithlogin(link):
             allhastags.append(hastags)
             captionlist.append(captionwithoutemoji)
             allcomments.append(listcomment)
-        # jika tidak terdapat views pada post (error), maka post adalah foto
-        except:
+        except: ##jika tidak terdapat views pada post (error), maka post adalah foto
             try:
-                caption = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul/div/li/div/div/div[2]/span')
-            except:  # jika tidak ada caption
+                caption = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul/div/li/div/div/div[2]/span')
+            except: ##jika tidak ada caption
                 continue
-            try:  # jika ada kata2 liked by, maka likes ditambah satu
-                likedby = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/a')
-                likesfind = driver.find_element_by_xpath(
-                    '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button/span')
-                likesfin = likesfind.text.replace(',', '')
+            try: ##jika ada kata2 liked by, maka likes ditambah satu
+                likedby = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/a')
+                likesfind = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button/span')
+                likesfin = likesfind.text.replace(',','')
                 likes = int(likesfin) + 1
                 likes = place_value(likes)
                 jumlahlike = str(likes)
             except:
                 try:
-                    likes = driver.find_element_by_xpath(
-                        '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button/span')
+                    likes = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button/span')
                 except:
                     try:
-                        likes = driver.find_element_by_xpath(
-                            '//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button')
+                        likes = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/section[2]/div/div/button')
                     except:
                         continue
                 jumlahlike = likes.text
-                if 'like this' in jumlahlike:  # jika ada kata2 "like this" berarti like 0
+                if 'like this' in jumlahlike: ##jika ada kata2 "like this" berarti like 0
                     jumlahlike = "0"
                 if 'like' in jumlahlike:
                     jumlahlike = jumlahlike.replace(' like', '')
-            comments = driver.find_elements_by_xpath(
-                '//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul//ul/div/li/div/div[1]/div[2]/span')
+            comments = driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/div/article/div[2]/div[1]/ul//ul/div/li/div/div[1]/div[2]/span')
             listcomment = []
             for comment in comments:
                 listcomment.append(give_emoji_free_text(comment.text))
@@ -149,10 +133,9 @@ def crawlwithlogin(link):
             allhastags.append(hastags)
             captionlist.append(captionwithoutemoji)
             allcomments.append(listcomment)
-    data = pd.DataFrame({"Account": usernamelist, "Post": captionlist,
-                         "Tag": allhastags, "Likes": likeslist, "Comments": allcomments})
+    data = pd.DataFrame({"Account":usernamelist, "Post":captionlist, "Tag":allhastags, "Likes":likeslist, "Comments":allcomments})
     with open(datasetfilename, 'a', encoding="utf-8", newline='') as f:
-        data.to_csv(f, header=f.tell() == 0, index=False)
+        data.to_csv(f, header=f.tell()==0, index=False)
     total_users_scrapped += 1
     return "sukses"
 
@@ -162,7 +145,7 @@ def getLinksofFollowers(link, limit):
     time.sleep(2)
     if "Page Not Found" in driver.title:
         return ["limit"]
-    username = link.replace("https://www.instagram.com/", "").replace("/", "")
+    username = link.replace("https://www.instagram.com/","").replace("/","")
     try:
         followerscount = driver.find_element_by_xpath('//a/span')
     except:
@@ -171,7 +154,7 @@ def getLinksofFollowers(link, limit):
     if followerscount == '':
         return ["private"]
     if ',' in followerscount:
-        followerscount = followerscount.replace(",", "")
+        followerscount = followerscount.replace(",","")
     if limit < int(followerscount):
         limitgan = limit
     else:
@@ -181,28 +164,23 @@ def getLinksofFollowers(link, limit):
     time.sleep(2)
     unamelist = []
     try:
-        followersList = driver.find_element_by_css_selector(
-            'div[role=\'dialog\'] ul')
+        followersList = driver.find_element_by_css_selector('div[role=\'dialog\'] ul')
     except:
         return getLinksofFollowers(link, limit)
-    numberOfFollowersInList = len(
-        followersList.find_elements_by_css_selector('li'))
+    numberOfFollowersInList = len(followersList.find_elements_by_css_selector('li'))
     actionChain = webdriver.ActionChains(driver)
     while (numberOfFollowersInList < limitgan):
         temp = numberOfFollowersInList
         time.sleep(2)
-        followersList = driver.find_element_by_css_selector(
-            'div[role=\'dialog\'] ul')
-        tes = driver.find_elements_by_xpath(
-            '/html/body/div[3]/div/div[2]/ul/div//li/div')
+        followersList = driver.find_element_by_css_selector('div[role=\'dialog\'] ul')
+        tes = driver.find_elements_by_xpath('/html/body/div[3]/div/div[2]/ul/div//li/div')
         try:
             tes[-1].click()
         except:
             return getLinksofFollowers(link, limit)
         actionChain.key_down(Keys.SPACE).key_up(Keys.SPACE).perform()
         try:
-            numberOfFollowersInList = len(
-                followersList.find_elements_by_css_selector('li'))
+            numberOfFollowersInList = len(followersList.find_elements_by_css_selector('li'))
         except:
             return getLinksofFollowers(link, limit)
         if temp == numberOfFollowersInList:
@@ -210,8 +188,7 @@ def getLinksofFollowers(link, limit):
     followers = []
     for user in followersList.find_elements_by_css_selector('li'):
         try:
-            userLink = user.find_element_by_css_selector(
-                'a').get_attribute('href')
+            userLink = user.find_element_by_css_selector('a').get_attribute('href')
         except:
             break
         followers.append(userLink)
@@ -230,11 +207,10 @@ def main(arrakun, first, limitfoll):
     pwd = strsplit[1]
     driver = webdriver.Chrome('chromedriver.exe')
     pd.set_option('display.max_columns', 500)
-    login(user, pwd)
+    login(user,pwd)
 
     while True:
-        # ambil followers dari orang pertama
-        followers_ring1 = getLinksofFollowers(firstperson, limitfoll)
+        followers_ring1 = getLinksofFollowers(firstperson, limitfoll) ##ambil followers dari orang pertama
         while followers_ring1[0] == "limit":
             if iakun == len(arrakun):
                 print("Semua akun sudah limit. Program akan berhenti..")
@@ -247,23 +223,19 @@ def main(arrakun, first, limitfoll):
             print("Memakai akun: "+user)
             pwd = strsplit[1]
             driver = webdriver.Chrome('chromedriver.exe')
-            login(user, pwd)
+            login(user,pwd)
             followers_ring1 = getLinksofFollowers(firstperson, limitfoll)
             iakun += 1
         if followers_ring1[0] == "private":
-            print(
-                "Akun pertama di private atau tidak punya followers, silahkan masukkan username yang lain!")
+            print("Akun pertama di private atau tidak punya followers, silahkan masukkan username yang lain!")
             return
         crawlwithlogin(firstperson)
         temp = followers_ring1
         i = 0
         hitung = 1
-        # looping user dari followers orang pertama (ring 1 BFS)
-        for user_ring1 in followers_ring1:
-            print("Mengscrape user urutan ke-"+str(hitung)+" dari followers " +
-                  first+", linknya: "+user_ring1+" (Ring 1 BFS)\n")
-            # setiap user di scrape postingannya (ring 1 BFS)
-            hasil = crawlwithlogin(user_ring1)
+        for user_ring1 in followers_ring1: ##looping user dari followers orang pertama (ring 1 BFS)
+            print("Mengscrape user urutan ke-"+str(hitung)+" dari followers "+first+", linknya: "+user_ring1+" (Ring 1 BFS)\n")
+            hasil = crawlwithlogin(user_ring1) ##setiap user di scrape postingannya (ring 1 BFS)
             if hasil == "private":
                 print("Gagal (akun private)")
                 hitung += 1
@@ -280,11 +252,10 @@ def main(arrakun, first, limitfoll):
                 print("Memakai akun: "+user)
                 pwd = strsplit[1]
                 driver = webdriver.Chrome('chromedriver.exe')
-                login(user, pwd)
+                login(user,pwd)
                 hasil = crawlwithlogin(user_ring1)
                 iakun += 1
-            # ambil followers dari setiap user ring 1 (ring2 BFS)
-            followers_ring2 = getLinksofFollowers(user_ring1, limitfoll)
+            followers_ring2 = getLinksofFollowers(user_ring1, limitfoll) ##ambil followers dari setiap user ring 1 (ring2 BFS)
             print("Mengambil setiap followers dari "+user_ring1+"...\n")
             while followers_ring2[0] == "limit":
                 if iakun == len(arrakun):
@@ -298,14 +269,13 @@ def main(arrakun, first, limitfoll):
                 print("Memakai akun: "+user)
                 pwd = strsplit[1]
                 driver = webdriver.Chrome('chromedriver.exe')
-                login(user, pwd)
+                login(user,pwd)
                 followers_ring2 = getLinksofFollowers(user_ring1, limitfoll)
                 iakun += 1
             if followers_ring2[0] == "private":
                 hitung += 1
                 continue
-            print("Mengscrape setiap user followers dari " +
-                  user_ring1+" (Ring 2 BFS)\n")
+            print("Mengscrape setiap user followers dari "+user_ring1+" (Ring 2 BFS)\n")
             for link in followers_ring2:
                 time.sleep(2)
                 new = crawlwithlogin(link)
@@ -322,13 +292,11 @@ def main(arrakun, first, limitfoll):
                     print("Memakai akun: "+user)
                     pwd = strsplit[1]
                     driver = webdriver.Chrome('chromedriver.exe')
-                    login(user, pwd)
+                    login(user,pwd)
                     new = crawlwithlogin(link)
                     iakun += 1
             hitung += 1
-        # saat selesai ring 2, orang pertama diganti dari user acak ring 2
-        firstperson = followers_ring2[random.randint(
-            0, len(followers_ring2) - 1)]
+        firstperson = followers_ring2[random.randint(0, len(followers_ring2) - 1)] ##saat selesai ring 2, orang pertama diganti dari user acak ring 2
 
 limitfoll = 500
 
@@ -337,7 +305,7 @@ x = input("Nama file akun (misal: akun.txt):\n")
 a = open(x, 'r')
 arrakun = [line.rstrip('\n') for line in a]
 jumlah = len(arrakun)
-print("Total akun: ", jumlah)
+print("Total akun: ",jumlah)
 print("\nSilahkan tentukan username pertama yang ingin di scrape, username ini akan jadi acuan untuk scrapping akun yang ada di followersnya\n")
 first = input("Username akun pertama yang ingin discrape (tanpa @):\n")
 datasetfilename = "dataset-"+first+".csv"
