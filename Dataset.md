@@ -1,3 +1,6 @@
+## Update:
+Hasil data terbaru untuk **Dataset Post** yaitu sebesar 116 MB, dan setelah dihapus baris yang duplicate dan diolah menjadi **Dataset Pasangan Kata**, menjadi sebesar 75.6 MB
+
 ### Hasil Data
 
 Hasil dari data yang kami kumpulkan untuk **Dataset Post** yaitu sebanyak 71.000+ baris, dengan ukuran sebesar 29.8 MB. Setelah dihapus baris yang sama dan diolah menjadi **Dataset Pasangan Kata**, terdapat 945.000+ baris dengan ukuran sebesar 25.4 MB.
