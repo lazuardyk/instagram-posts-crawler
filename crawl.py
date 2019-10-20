@@ -9,7 +9,6 @@ import random
 
 total_users_scrapped = 0
 
-
 def login(username, password):
     global driver
     driver.get("https://www.instagram.com/accounts/login/")
@@ -26,14 +25,11 @@ def login(username, password):
     driver.execute_script('arguments[0].click();', login)
     time.sleep(2)
 
-
 def give_emoji_free_text(text):
     return emoji.get_emoji_regexp().sub(r'', text)
 
-
 def place_value(number):
     return ("{:,}".format(number))
-
 
 def crawlwithlogin(link):
     global driver
@@ -160,7 +156,6 @@ def crawlwithlogin(link):
     total_users_scrapped += 1
     return "sukses"
 
-
 def getLinksofFollowers(link, limit):
     global driver
     driver.get(link)
@@ -223,7 +218,6 @@ def getLinksofFollowers(link, limit):
         if (len(followers) == limitgan):
             break
     return followers
-
 
 def main(arrakun, first, limitfoll):
     global driver
@@ -335,7 +329,6 @@ def main(arrakun, first, limitfoll):
         # saat selesai ring 2, orang pertama diganti dari user acak ring 2
         firstperson = followers_ring2[random.randint(
             0, len(followers_ring2) - 1)]
-
 
 limitfoll = 500
 
