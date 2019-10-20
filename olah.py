@@ -1,12 +1,13 @@
 import pandas as pd
 import re
 
+pd.set_option('display.max_columns', None)  
 namafile = input("Masukkan nama file CSV yang ingin diolah menjadi Dataset Pasangan Kata:\n")
 output = 'dataset-pasangankata.csv'
 df = pd.read_csv(namafile)
 length = len(df)
 print("panjang data: "+str(length))
-df.drop_duplicates(keep=False,inplace=True)
+df.drop_duplicates(subset=['Account', 'Post'],keep='first',inplace=True)
 length = len(df)
 print("setelah baris duplikat dihapus: "+str(length)+"\n")
 
@@ -48,6 +49,8 @@ for index, username in account.iteritems():
         words = key.split()
         word1 = re.sub(r"[^a-zA-Z0-9]+", '', words[0])
         word2 = re.sub(r"[^a-zA-Z0-9]+", '', words[1])
+        word1 = word1.lower()
+        word2 = word2.lower()
         if word1 == '' or word2 == '':
             continue
         data = pd.DataFrame({"id_user":[id_user], "word1":[word1], "word2":[word2], "freqs":[value]}, index=[idx])
