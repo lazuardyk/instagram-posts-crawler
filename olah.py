@@ -22,7 +22,7 @@ for index, username in account.iteritems():
     pairs = set()
     allcaptions = ""
     for index, row in dataperacc.iterrows():
-        caption = str(row['Post'])
+        caption = str(row['Post']).lower()
         allcaptions += caption+" "
         capsplit = caption.split()
         panjang = len(capsplit)
@@ -49,8 +49,6 @@ for index, username in account.iteritems():
         words = key.split()
         word1 = re.sub(r"[^a-zA-Z0-9]+", '', words[0])
         word2 = re.sub(r"[^a-zA-Z0-9]+", '', words[1])
-        word1 = word1.lower()
-        word2 = word2.lower()
         if word1 == '' or word2 == '':
             continue
         data = pd.DataFrame({"id_user":[id_user], "word1":[word1], "word2":[word2], "freqs":[value]}, index=[idx])
