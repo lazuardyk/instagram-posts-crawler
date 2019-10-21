@@ -1,5 +1,5 @@
 ## Update:
-Hasil data terbaru untuk **Dataset Post** yaitu sebesar 116 MB, dan setelah dihapus baris yang duplicate dan diolah menjadi **Dataset Pasangan Kata**, menjadi sebesar 75.6 MB
+Hasil data terbaru untuk **Dataset Post** yaitu sebesar 116 MB, dan setelah dihapus baris yang duplicate dan diolah menjadi **Dataset Pasangan Kata**, menjadi sebesar 74.9 MB
 
 ### Hasil Data
 
